@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/main_UI">
+    <fragment
+        android:id="@+id/main_UI"
+        android:name="com.example.garden.Main_UI"
+        android:label="main_ui"
+        tools:layout="@layout/main_ui" >
+        <action
+            android:id="@+id/action_main_UI_to_weatherUI"
+            app:destination="@id/weatherUI" />
+        <action
+            android:id="@+id/action_main_UI_to_gardenUI"
+            app:destination="@id/gardenUI" />
+    </fragment>
+    <fragment
+        android:id="@+id/gardenUI"
+        android:name="com.example.garden.GardenUI"
+        android:label="garden_ui"
+        tools:layout="@layout/garden_ui" />
+    <fragment
+        android:id="@+id/weatherUI"
+        android:name="com.example.garden.WeatherUI"
+        android:label="weather_ui"
+        tools:layout="@layout/weather_ui" />
+</navigation>
