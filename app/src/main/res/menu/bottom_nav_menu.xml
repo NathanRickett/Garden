@@ -1,17 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/home"
-        android:titleCondensed="Home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:icon="@drawable/baseline_home_24"
-        android:title="Home" />
-
-    <item android:id="@+id/garden"
+    <item android:id="@+id/garden_icon"
         android:titleCondensed="Garden"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:icon="@drawable/baseline_water_24"
+        android:icon="@drawable/vector_garden_icon"
         android:title="Garden" />
+
+    <item android:id="@+id/knowledge_icon"
+        android:titleCondensed="Knowledge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_school_24"
+        android:title="Knowledge" />
+
+    <item android:id="@+id/notifications_icon"
+        android:titleCondensed="Notifications"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/vector_notification_icon"
+        android:title="Notifications" />
+
+    <item android:id="@+id/weather_icon"
+        android:titleCondensed="Weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/vector_weather_icon"
+        android:title="Weather" />
+
+    <item android:id="@+id/calendar_icon"
+        android:titleCondensed="Calendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/vector_calendar_icon"
+        android:title="Calendar" />
+
     </menu>

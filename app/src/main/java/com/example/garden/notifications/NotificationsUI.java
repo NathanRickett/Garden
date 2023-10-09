@@ -1,34 +1,32 @@
-package com.example.garden;
+package com.example.garden.notifications;
 
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModel;
-import androidx.lifecycle.ViewModelProvider;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.garden.R;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link WeatherUI#newInstance} factory method to
+ * Use the {@link NotificationsUI#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class WeatherUI extends Fragment {
+public class NotificationsUI extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    private ViewModel myViewModel;
-
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
-    public WeatherUI() {
+    public NotificationsUI() {
         // Required empty public constructor
     }
 
@@ -38,11 +36,11 @@ public class WeatherUI extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment BlankFragment.
+     * @return A new instance of fragment notifications_ui.
      */
     // TODO: Rename and change types and number of parameters
-    public static WeatherUI newInstance(String param1, String param2) {
-        WeatherUI fragment = new WeatherUI();
+    public static NotificationsUI newInstance(String param1, String param2) {
+        NotificationsUI fragment = new NotificationsUI();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -57,15 +55,12 @@ public class WeatherUI extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
-
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.weather_ui, container, false);
+        return inflater.inflate(R.layout.fragment_notifications_ui, container, false);
     }
 }

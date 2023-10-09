@@ -1,4 +1,4 @@
-package com.example.garden;
+package com.example.garden.weather;
 
 public class WeatherState {
     private int temp;

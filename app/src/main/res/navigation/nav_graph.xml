@@ -3,27 +3,39 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/main_UI">
-    <fragment
-        android:id="@+id/main_UI"
-        android:name="com.example.garden.Main_UI"
-        android:label="main_ui"
-        tools:layout="@layout/main_ui" >
-        <action
-            android:id="@+id/action_main_UI_to_weatherUI"
-            app:destination="@id/weatherUI" />
-        <action
-            android:id="@+id/action_main_UI_to_gardenUI"
-            app:destination="@id/gardenUI" />
-    </fragment>
+    app:startDestination="@id/gardenUI">
     <fragment
         android:id="@+id/gardenUI"
-        android:name="com.example.garden.GardenUI"
+        android:name="com.example.garden.garden.GardenUI"
         android:label="garden_ui"
-        tools:layout="@layout/garden_ui" />
+        tools:layout="@layout/fragment_garden_ui" >
+        <action
+            android:id="@+id/action_gardenUI_to_gardenBuilderUI"
+            app:destination="@id/gardenBuilderUI" />
+    </fragment>
     <fragment
         android:id="@+id/weatherUI"
-        android:name="com.example.garden.WeatherUI"
+        android:name="com.example.garden.weather.WeatherUI"
         android:label="weather_ui"
-        tools:layout="@layout/weather_ui" />
+        tools:layout="@layout/fragment_weather_ui" />
+    <fragment
+        android:id="@+id/calendarUI"
+        android:name="com.example.garden.calendar.CalendarUI"
+        android:label="fragment_calendar_ui"
+        tools:layout="@layout/fragment_calendar_ui" />
+    <fragment
+        android:id="@+id/knowledgeUI"
+        android:name="com.example.garden.KnowledgeUI"
+        android:label="fragment_knowledge_ui"
+        tools:layout="@layout/fragment_knowledge_ui" />
+    <fragment
+        android:id="@+id/notificationsUI"
+        android:name="com.example.garden.notifications.NotificationsUI"
+        android:label="fragment_notifications_ui"
+        tools:layout="@layout/fragment_notifications_ui" />
+    <fragment
+        android:id="@+id/gardenBuilderUI"
+        android:name="com.example.garden.garden.GardenBuilderUI"
+        android:label="fragment_garden_builder_ui"
+        tools:layout="@layout/fragment_garden_builder_ui" />
 </navigation>

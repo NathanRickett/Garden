@@ -1,8 +1,10 @@
-package com.example.garden;
+package com.example.garden.weather;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
+
+import com.example.garden.weather.WeatherState;
 
 public class WeatherModel extends ViewModel {
     public int temp;

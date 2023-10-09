@@ -1,26 +1,15 @@
 package com.example.garden;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
-import androidx.navigation.NavDirections;
-import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationBarMenuView;
+import com.example.garden.weather.WeatherModel;
 import com.google.android.material.navigation.NavigationBarView;
 
 import java.util.Random;
@@ -49,8 +38,6 @@ public class MainActivity extends AppCompatActivity {
         navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
         navController = navHostFragment.getNavController();
         b = (NavigationBarView) findViewById(R.id.bottom_nav_view);
-        //setting the current fragment view to the main UI
-        currentFragmentID = R.id.main_UI;
 
 
 
@@ -60,15 +47,7 @@ public class MainActivity extends AppCompatActivity {
         b.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                if (item.getItemId() == R.id.home) {
-                    Log.d("ui clicks", "home button clicked");
-                    navigate("main_ui");
-                }
-                else if (item.getItemId() == R.id.garden) {
-                    Log.d("ui clicks", "garden button clicked");
-                    navigate("garden_ui");
-                }
-
+                navigate(item.getItemId());
                 return true;
             }
         });
@@ -95,31 +74,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //handle navigation sanitization here
-    private void navigate(String menuButtonID) {
+    private void navigate(int menuItemId) {
 
-        switch(menuButtonID) {
-            case "main_ui":
-                Log.d("navigation", "navigating to main_ui");
-                navController.navigate(R.id.main_UI);
-                break;
-            case "garden_ui":
-                Log.d("navigation", "navigating to garden_ui");
-                navController.navigate(R.id.action_main_UI_to_gardenUI);
-                break;
-            case "weather_ui":
-                Log.d("navigation", "navigating to weather_ui");
-            default:
-                Log.d("navigation", "received unexpected input into navigate function");
-
-
+        if (menuItemId == R.id.garden_icon) {
+            navController.navigate(R.id.gardenUI);
         }
-
-
-
-
-
-
-
+        else if (menuItemId == R.id.knowledge_icon) {
+            navController.navigate(R.id.knowledgeUI);
+        }
+        else if (menuItemId == R.id.notifications_icon) {
+            navController.navigate(R.id.notificationsUI);
+        }
+        else if (menuItemId == R.id.weather_icon) {
+            navController.navigate(R.id.weatherUI);
+        }
+        else if (menuItemId == R.id.calendar_icon) {
+            navController.navigate(R.id.calendarUI);
+        }
     }
 
 

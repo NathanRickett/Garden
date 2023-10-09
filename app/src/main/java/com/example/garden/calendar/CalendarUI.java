@@ -1,4 +1,4 @@
-package com.example.garden;
+package com.example.garden.calendar;
 
 import android.os.Bundle;
 
@@ -8,12 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.garden.R;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link Main_UI#newInstance} factory method to
+ * Use the {@link CalendarUI#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Main_UI extends Fragment {
+public class CalendarUI extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +26,7 @@ public class Main_UI extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public Main_UI() {
+    public CalendarUI() {
         // Required empty public constructor
     }
 
@@ -34,11 +36,11 @@ public class Main_UI extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment main_ui.
+     * @return A new instance of fragment calendar_ui.
      */
     // TODO: Rename and change types and number of parameters
-    public static Main_UI newInstance(String param1, String param2) {
-        Main_UI fragment = new Main_UI();
+    public static CalendarUI newInstance(String param1, String param2) {
+        CalendarUI fragment = new CalendarUI();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +61,6 @@ public class Main_UI extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.main_ui, container, false);
+        return inflater.inflate(R.layout.fragment_calendar_ui, container, false);
     }
 }
